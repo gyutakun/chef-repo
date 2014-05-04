@@ -1,0 +1,11 @@
+{
+  "run_list" : [
+    "recipe[vim]",
+    "recipe[nginx]",
+    "recipe[apt]",
+    "recipe[build-essential]",
+    "recipe[ohai]",
+    "recipe[rsyslog]",
+    "recipe[runit]"
+  ]
+}
