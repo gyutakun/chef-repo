@@ -20,7 +20,7 @@
 # limitations under the License.
 #
 
-node.default['nginx']['passenger']['version'] = '3.0.19'
+node.default['nginx']['passenger']['version'] = '4.0.41'
 
 if node['languages'].attribute?('ruby')
   node.default['nginx']['passenger']['root'] = "#{node['languages']['ruby']['gems_dir']}/gems/passenger-#{node['nginx']['passenger']['version']}"
@@ -36,7 +36,8 @@ end
 node.default['nginx']['passenger']['packages']['rhel'] = %w(ruby-devel curl-devel)
 node.default['nginx']['passenger']['packages']['debian'] = %w(ruby-dev libcurl4-gnutls-dev)
 
-node.default['nginx']['passenger']['spawn_method'] = 'smart-lv2'
+#node.default['nginx']['passenger']['spawn_method'] = 'smart-lv2'
+node.default['nginx']['passenger']['spawn_method'] = 'conservative'
 node.default['nginx']['passenger']['buffer_response'] = 'on'
 node.default['nginx']['passenger']['max_pool_size'] = 6
 node.default['nginx']['passenger']['min_instances'] = 1

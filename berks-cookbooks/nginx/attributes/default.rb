@@ -23,13 +23,13 @@
 # In order to update the version, the checksum attribute must be changed too.
 # This attribute is in the source.rb file, though we recommend overriding
 # attributes by modifying a role, or the node itself.
-default['nginx']['version']      = '1.4.4'
+default['nginx']['version']      = '1.6.0'
 default['nginx']['package_name'] = 'nginx'
 default['nginx']['dir']          = '/etc/nginx'
 default['nginx']['script_dir']   = '/usr/sbin'
 default['nginx']['log_dir']      = '/var/log/nginx'
 default['nginx']['binary']       = '/usr/sbin/nginx'
-default['nginx']['default_root'] = '/home/nakayama/www'
+default['nginx']['default_root'] = '/home/nakayama/www/rortest/public'
 
 case node['platform_family']
 when 'debian'

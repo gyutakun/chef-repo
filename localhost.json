@@ -1,8 +1,7 @@
 {
   "run_list" : [
     "recipe[vim]",
-    "recipe[nginx]",
-    "recipe[nginx::passenger]",
+    "recipe[nginx::source]",
     "recipe[apt]",
     "recipe[build-essential]",
     "recipe[ohai]",
